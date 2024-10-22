@@ -10,6 +10,7 @@ import starter.SwagLabs.Interations.Login;
 import starter.SwagLabs.Interations.RemoveItemFromCart;
 import starter.SwagLabs.pageobjects.CartPage;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
@@ -34,7 +35,8 @@ public class RemoveItemFromCartTests {
         // Remover el primer producto del carrito
         user.attemptsTo(RemoveItemFromCart.fromCart());
         // Verifica que el carrito está vacío después de eliminar
-        // CartPage cartPage = new CartPage();
-        // Ensure.that(cartPage.isCartEmpty()).isTrue(); 
-    }}
+
+    // Verifica que el carrito esté vacío
+    boolean isCartEmpty = CartPage.isCartEmpty(user);  // Llamada al método estático para verificar
+    Assertions.assertTrue(isCartEmpty, "El carrito debería estar vacío pero no lo está."); }} // Mensaje de error descriptivo
     

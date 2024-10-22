@@ -12,9 +12,9 @@ public class BuyItems {
         @Override
         public <T extends Actor> void performAs(T actor) {
             actor.attemptsTo(
-                Click.on(HomePage.ADD_TO_CART_BUTTON.of("1")) // Agregar primer producto al carrito
-                // Click.on(HomePage.ADD_TO_CART_BUTTON.of("2")),  // Agregar segundo producto al carrito
-                // Click.on(HomePage.ADD_TO_CART_BUTTON.of("3"))  // Agregar tercero producto al carrito
+                Click.on(HomePage.ADD_TO_CART_BUTTON.of("1")), // Agregar primer producto al carrito
+                Click.on(HomePage.ADD_TO_CART_BUTTON.of("2")),  // Agregar segundo producto al carrito
+                Click.on(HomePage.ADD_TO_CART_BUTTON.of("3"))  // Agregar tercero producto al carrito
             );
         }
     }

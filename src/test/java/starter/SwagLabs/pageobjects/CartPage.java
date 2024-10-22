@@ -29,15 +29,17 @@ public class CartPage extends PageObject {
     public void removeFirstItem(Actor actor) {
         actor.attemptsTo(Click.on(REMOVE_ITEM_BUTTON));
     }
-
     public static boolean isCartEmpty(Actor actor) {
         try {
-            return !CART_LIST.resolveFor(actor).isVisible();
+            // Intenta resolver la lista de elementos en el carrito
+            return CART_LIST.resolveAllFor(actor).isEmpty();
         } catch (Exception e) {
-            // Log de la excepción para ayudar a depurar
+            // Usa un logger en lugar de System.err para un mejor manejo en proyectos grandes
             System.err.println("Error verificando si el carrito está vacío: " + e.getMessage());
-            return true; // Si hay un error, se asume que el carrito está vacío
+            // Opcionalmente, puedes lanzar una excepción personalizada para que el error no pase desapercibido
+            throw new RuntimeException("Error al verificar el carrito", e);
         }
     }
+    
 
 }
