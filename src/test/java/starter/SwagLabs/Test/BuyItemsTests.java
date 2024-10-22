@@ -40,6 +40,6 @@ public class BuyItemsTests {
 
 
 
-        Ensure.that(CartPage.CART_LIST).isDisplayed(); // Verifica que la lista de productos en el carrito esté visible
+        Ensure.that(CartPage.CART_ITEMS).isDisplayed(); // Verifica que la lista de productos en el carrito esté visible
     }
 }

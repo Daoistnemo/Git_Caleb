@@ -10,8 +10,8 @@ public class RemoveItemFromCart implements Interaction {
 
     @Override
     public <T extends Actor> void performAs(T actor) {
-        CartPage cartPage = new CartPage(); // Asegúrate de que el objeto se crea correctamente
-        actor.attemptsTo(Click.on(cartPage.REMOVE_ITEM_BUTTON));
+        // Asegúrate de que el objeto se crea correctamente
+        actor.attemptsTo(Click.on(CartPage.REMOVE_BUTTON));
     }
 
     public static RemoveItemFromCart fromCart() {

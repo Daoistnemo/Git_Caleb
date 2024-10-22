@@ -3,7 +3,6 @@ package starter.SwagLabs.Test;
 import net.serenitybdd.junit5.SerenityJUnit5Extension;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.annotations.CastMember;
-import net.serenitybdd.screenplay.ensure.Ensure;
 import starter.SwagLabs.Interations.Navigate;
 import starter.SwagLabs.Interations.BuyItems;
 import starter.SwagLabs.Interations.Login;
@@ -38,5 +37,6 @@ public class RemoveItemFromCartTests {
 
     // Verifica que el carrito esté vacío
     boolean isCartEmpty = CartPage.isCartEmpty(user);  // Llamada al método estático para verificar
-    Assertions.assertTrue(isCartEmpty, "El carrito debería estar vacío pero no lo está."); }} // Mensaje de error descriptivo
-    
+    Assertions.assertTrue(isCartEmpty, "El carrito debería estar vacío pero no lo está.");
+ } } 
+  
