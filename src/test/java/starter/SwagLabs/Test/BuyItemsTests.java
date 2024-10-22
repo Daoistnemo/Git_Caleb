@@ -17,7 +17,7 @@ public class BuyItemsTests {
     Actor user;
 
     @Test
-    public void userShouldBeAbleToLogOut() {
+    public void userShouldBeAbleToBuy() {
         // Credenciales de inicio de sesión
         String username = "standard_user";
         String password = "secret_sauce";
