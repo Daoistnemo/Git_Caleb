@@ -15,7 +15,7 @@ import org.junit.jupiter.api.extension.ExtendWith;
 @ExtendWith(SerenityJUnit5Extension.class)
 public class LogoutTests {
 
-    @CastMember(name = "User")
+    @CastMember(name = "Victor")
     Actor user;
 
     @Test

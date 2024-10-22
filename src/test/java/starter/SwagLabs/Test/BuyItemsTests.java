@@ -13,8 +13,8 @@ import starter.SwagLabs.pageobjects.CartPage;
 
 @ExtendWith(SerenityJUnit5Extension.class)
 public class BuyItemsTests {
-    @CastMember(name = "User")
-    Actor user;
+    @CastMember(name = "Luis")
+    Actor Luis;
 
     @Test
     public void userShouldBeAbleToBuy() {
@@ -28,7 +28,7 @@ public class BuyItemsTests {
         // 3. Comprar
         // 4. Ir al carrito
 
-        user.attemptsTo(
+        Luis.attemptsTo(
             Navigate.toLoginPage(),                          // Navega a la página de login
             Login.withCredentials(username, password),       // Inicia sesión
             Navigate.toHomePage(),    // Navegar a la página de inicio

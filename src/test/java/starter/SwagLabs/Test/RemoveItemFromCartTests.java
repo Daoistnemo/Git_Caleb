@@ -16,7 +16,7 @@ import org.junit.jupiter.api.extension.ExtendWith;
 @ExtendWith(SerenityJUnit5Extension.class)
 public class RemoveItemFromCartTests {
 
-    @CastMember(name = "User")
+    @CastMember(name = "Julio")
     Actor user;
 
     @Test
@@ -35,8 +35,8 @@ public class RemoveItemFromCartTests {
         user.attemptsTo(RemoveItemFromCart.fromCart());
         // Verifica que el carrito está vacío después de eliminar
 
-    // Verifica que el carrito esté vacío
-    //boolean isCartEmpty = CartPage.isCartEmpty(user);  // Llamada al método estático para verificar
-    //Assertions.assertTrue(isCartEmpty, "El carrito debería estar vacío pero no lo está.");
+    //Verifica que el carrito esté vacío
+    boolean isCartEmpty = CartPage.isCartEmpty(user);  // Llamada al método estático para verificar
+    Assertions.assertTrue(isCartEmpty, "El carrito debería estar vacío pero no lo está.");
  } } 
   
