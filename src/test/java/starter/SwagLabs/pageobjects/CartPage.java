@@ -67,4 +67,8 @@ public static int getNumberOfItemsInCart(Actor actor) {
         actor.attemptsTo(
                 Click.on(REMOVE_BUTTON));
     }
-}
+    // Método para continuar con la compra
+    public static void continueBuy(Actor actor) {
+        actor.attemptsTo(Click.on(CHECKOUT_BUTTON));
+    }
+   }

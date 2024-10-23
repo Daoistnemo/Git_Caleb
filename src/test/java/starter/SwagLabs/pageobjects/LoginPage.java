@@ -3,8 +3,9 @@ package starter.SwagLabs.pageobjects;
 import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.targets.Target;
+import net.serenitybdd.annotations.DefaultUrl;
 
-@net.serenitybdd.annotations.DefaultUrl("https://www.saucedemo.com/v1/") // Define la URL por defecto aquí
+@DefaultUrl("https://www.saucedemo.com/v1/") // Define la URL por defecto aquí
 public class LoginPage extends PageObject {
 
     public static final Target USERNAME_FIELD = Target.the("username field")
